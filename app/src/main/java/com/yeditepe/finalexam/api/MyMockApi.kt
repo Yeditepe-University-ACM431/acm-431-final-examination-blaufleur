@@ -7,32 +7,32 @@ class MyMockApi : TaskApi {
         return listOf(
             TaskDto(
                 id = 1,
-                title = "Task#1",
+                title = "Task1",
                 completed = true
             ),
             TaskDto(
                 id = 2,
-                title = "Task#2",
+                title = "Task2",
                 completed = false
             ),
             TaskDto(
                 id = 3,
-                title = "Task#3",
+                title = "Task3",
                 completed = true
             ),
             TaskDto(
                 id = 4,
-                title = "Task#4",
+                title = "Task4",
                 completed = false
             ),
             TaskDto(
                 id = 5,
-                title = "Task#5",
+                title = "Task5",
                 completed = false
             ),
             TaskDto(
                 id = 6,
-                title = "Task#6",
+                title = "Task6",
                 completed = false
             )
         )
