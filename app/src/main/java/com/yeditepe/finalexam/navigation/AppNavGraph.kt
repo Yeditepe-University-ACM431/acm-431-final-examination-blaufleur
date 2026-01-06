@@ -9,6 +9,7 @@ import androidx.navigation.NavArgument
 import androidx.navigation.NavArgumentBuilder
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHost
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -38,7 +39,12 @@ fun AppNavGraph() {
 
         // TODO 2: Add composable for "taskDetail/{title}"
         composable(
-            route = "taskDetail/{title}"
+            route = "taskDetail/{title}",
+            arguments = listOf(
+                navArgument("title") {
+                    type = NavType.StringType
+                }
+            )
         ) { navBackStackEntry ->
             val title = navBackStackEntry.arguments?.getString("title") ?: ""
             TaskDetailScreen(title)
