@@ -30,10 +30,7 @@ fun TaskListScreen(viewModel: TaskViewModel = viewModel()) {
         // Use a simple Column or LazyColumn
         LazyColumn {
             items(state.value) { t ->
-                Card (modifier = Modifier.padding(8.dp)) {
-                    Text(text = t.title)
-                    Text(text = "Completed: ${t.isCompleted}")
-                }
+                TaskRow(task = t, rememberNavController())
             }
         }
     }
