@@ -3,6 +3,7 @@ package com.yeditepe.finalexam.ui
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -40,6 +41,7 @@ fun TaskListScreen(viewModel: TaskViewModel, navController: NavController) {
             verticalArrangement = Arrangement.Center) {
             items(state.value) { t ->
                 TaskRow(task = t, navController = navController)
+                Spacer(modifier = Modifier.padding(8.dp))
             }
         }
     }
@@ -57,7 +59,7 @@ fun TaskRow(task: Task, navController: NavController) {
     )
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun TaskListScreenPreview() {
     MyApplicationTheme {
