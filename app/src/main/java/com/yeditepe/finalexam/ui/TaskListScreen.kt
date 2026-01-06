@@ -46,6 +46,7 @@ fun TaskRow(task: Task, navController: NavController) {
         text = task.title,
         modifier = Modifier.clickable {
             // TODO 3: Navigate to detail screen with task title
+            navController.navigate("taskDetail/${task.title}")
         }
     )
 }

@@ -30,6 +30,6 @@ class TaskViewModel : ViewModel() {
             t.id == taskId
         } ?: return
 
-        task.isCompleted == !task.isCompleted
+        task.isCompleted = !task.isCompleted
     }
 }
